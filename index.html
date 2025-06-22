@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ManageEngine OpManager Plus – Unified IT Operations Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --accent: #009688;
+            --light: #f5f7fa;
+            --dark: #212121;
+            --card: #fff;
+            --border: #e0e0e0;
+            --benefit-bg: #e3f2fd;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background: linear-gradient(90deg, var(--primary) 70%, var(--accent));
+            color: #fff;
+            padding: 3rem 1rem 2rem 1rem;
+            text-align: center;
+        }
+        header img {
+            max-width: 350px;
+            margin: 2rem auto 0 auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+        .module-card {
+            background: var(--card);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(26,35,126,0.07);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 510px;
+        }
+        .module-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            background: #e3e3e3;
+        }
+        .features-list, .scenario-list {
+            padding-left: 1.2rem;
+        }
+        .features-list li {
+            margin-bottom: 0.3rem;
+        }
+        .scenario {
+            background: #e3f2fd;
+            border-left: 4px solid var(--accent);
+            padding: 0.7rem 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-size: 0.97em;
+        }
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .benefits-section {
+            background: var(--benefit-bg);
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .benefit-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .roi-section {
+            background: #fffde7;
+            border-radius: 12px;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ffe082;
+        }
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .roi-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(26,35,126,0.04);
+            border-left: 4px solid var(--accent);
+        }
+        .footer {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem 0;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background: #00796b;
+        }
+        @media (max-width: 700px) {
+            header img { max-width: 95vw; }
+            .container { padding: 1rem 0.3rem; }
+            .modules-grid, .benefits-grid, .roi-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ManageEngine OpManager Plus</h1>
+        <h2>Unified IT Operations Management Platform</h2>
+        <p>Monitor, manage, and secure your entire IT infrastructure from a single pane of glass.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWeh-kLaWyUIErh3BUL4vKj9ZmjP362mBr3A&s" alt="OpManager Plus Unified Dashboard">
+        <a href="https://demo.opmanagerplus.com" class="cta-btn"> Live Demo</a>
+    </header>
+
+   
+        <!-- Modules Section -->
+        <h2 class="section-title">All-in-One ITOM Modules</h2>
+        <div class="modules-grid">
+            <!-- Network Monitoring -->
+            <div class="module-card">
+                <img src="https://itchronicles.com/wp-content/uploads/2024/01/network-monitoringjpg.jpg" alt="Network Monitoring">
+                <h3>Network Performance Monitoring</h3>
+                <ul class="features-list">
+                    <li>Real-time monitoring of routers, switches, firewalls, load balancers, wireless controllers, and more</li>
+                    <li>Customizable dashboards and business views</li>
+                    <li>Automated device discovery (up to 10,000+ devices)</li>
+                    <li>SNMP, WMI, CLI, and API support for multi-vendor environments</li>
+                    <li>Layer2/Layer3 network mapping</li>
+                    <li>Hardware health monitoring (fan, power, temperature)</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> A sudden spike in CPU utilization on a core switch triggers an instant alert, allowing the network admin to intervene before users notice any slowdown.
+                </div>
+            </div>
+            <!-- Bandwidth Management -->
+            <div class="module-card">
+                <img src="https://learn.g2.com/hs-fs/hubfs/G2CM_FI634_Learn_Article_Images_%5BNetwork_traffic_analysis%5D_V1a.png?width=690&name=G2CM_FI634_Learn_Article_Images_%5BNetwork_traffic_analysis%5D_V1a.png" alt="Bandwidth Analysis">
+                <h3>Bandwidth & Traffic Analysis</h3>
+                <ul class="features-list">
+                    <li>Detailed NetFlow, sFlow, jFlow, IPFIX, NetStream support</li>
+                    <li>Application, protocol, and conversation-level traffic analytics</li>
+                    <li>Top talkers, top applications, and bandwidth hog detection</li>
+                    <li>QoS monitoring and reporting</li>
+                    <li>Historical trend analysis & capacity planning</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Detects a video streaming surge on a branch link, allowing IT to apply QoS policies and prevent business app slowdowns.
+                </div>
+            </div>
+            <!-- Configuration Management -->
+            <div class="module-card">
+                <img src="https://www.dnsstuff.com/wp-content/uploads/2025/05/Configuration-management.png" alt="Configuration Management">
+                <h3>Network Configuration & Compliance</h3>
+                <ul class="features-list">
+                    <li>Automated configuration backups for network devices</li>
+                    <li>Change detection with instant alerts and rollback</li>
+                    <li>Compliance checks (PCI DSS, HIPAA, SOX, etc.)</li>
+                    <li>Role-based access and approval workflows</li>
+                    <li>Firmware upgrade automation</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> A misconfigured firewall rule is rolled back automatically after an unauthorized change, ensuring security and compliance.
+                </div>
+            </div>
+            <!-- Firewall Management -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t1S6LDqeXyRVDAzqHjwVImAmmSClYe0zDQ&s" alt="Firewall Management">
+                <h3>Firewall Management & Security Audits</h3>
+                <ul class="features-list">
+                    <li>Centralized firewall rule and policy management</li>
+                    <li>Change and anomaly detection</li>
+                    <li>VPN monitoring and log analysis</li>
+                    <li>Comprehensive security and compliance reporting</li>
+                    <li>Rogue device and intrusion detection</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Anomalous VPN activity is detected and flagged, prompting an immediate security audit.
+                </div>
+            </div>
+            <!-- IP & Switch Port Management -->
+            <div class="module-card">
+                <img src="https://www.ipxo.com/app/uploads/2021/08/Delegated-RPKI-1.png" alt="IP Address Management">
+                <h3>IP Address & Switch Port Management</h3>
+                <ul class="features-list">
+                    <li>Automated IP address scanning and tracking</li>
+                    <li>Switch port mapping and utilization monitoring</li>
+                    <li>IP conflict and availability alerts</li>
+                    <li>Subnet and VLAN management</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Detects an IP conflict in real time, allowing IT to resolve before it impacts end users.
+                </div>
+            </div>
+            <!-- Server & Virtualization Monitoring -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_zGBpMLb-DMijk1UPY3ldZgIaJ0hXPECPQYuIHYYiIVjnClxQ_TE3fxlONGlbSGPNWWE&usqp=CAU" alt="Server Monitoring">
+                <h3>Server & Virtualization Monitoring</h3>
+                <ul class="features-list">
+                    <li>Physical & virtual server health monitoring (Windows, Linux, VMware, Hyper-V)</li>
+                    <li>Resource tracking: CPU, memory, disk, processes, and services</li>
+                    <li>Cloud monitoring: AWS, Azure, GCP</li>
+                    <li>VM sprawl detection and management</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Automatic alert for high memory usage on a critical VM, with recommended remediation steps.
+                </div>
+            </div>
+            <!-- Storage Monitoring -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaeqRgiStlNNtBSQDzS0PgqO4L7z54yy6RpCjjhDOJFcoL79aUhdu1wmmBEKjlo_3WMMs&usqp=CAU" alt="Storage Monitoring">
+                <h3>Storage Device Monitoring</h3>
+                <ul class="features-list">
+                    <li>Monitor SAN, NAS, RAID, and tape libraries</li>
+                    <li>Track IOPS, latency, and storage utilization</li>
+                    <li>Automated alerts for capacity thresholds</li>
+                    <li>Vendor-agnostic support (NetApp, EMC, Dell, HP, etc.)</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Storage nearing capacity triggers an alert, enabling proactive expansion and avoiding downtime.
+                </div>
+            </div>
+            <!-- Application Performance Monitoring -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkUemN9jwWCKpcfJL0qmE-4I0hJfDKCxKZW951fCr_tsbscPM_zGxQshqpdbZvKgMnziQ&usqp=CAU" alt="Application Monitoring">
+                <h3>Application Performance Monitoring</h3>
+                <ul class="features-list">
+                    <li>Monitor 130+ application types (web, database, mail, etc.)</li>
+                    <li>Multi-geographic monitoring and synthetic transactions</li>
+                    <li>Root cause analysis for slowdowns</li>
+                    <li>End-user experience monitoring</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> A slow web app is traced to a backend database issue, resolved before users are impacted.
+                </div>
+            </div>
+            <!-- Automation & Workflow -->
+            <div class="module-card">
+                <img src="https://cdn.prod.website-files.com/5d9bdb47e33988bf5815bfed/659c9a73c39d516f303a1cf8_workflows-automation.png" alt="Automation and Workflow">
+                <h3>Automation & Workflow Engine</h3>
+                <ul class="features-list">
+                    <li>Automate repetitive IT tasks and incident responses</li>
+                    <li>Pre-built and custom workflow templates</li>
+                    <li>REST API and Python integration</li>
+                    <li>Trigger scripts on alerts or schedule</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Automated device reboot and service restart when a threshold breach is detected, reducing manual intervention.
+                </div>
+            </div>
+            <!-- Reporting & Dashboards -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9YP2g0j54V9-2x7DQZrt6SOsiSBR55mfOw&s" alt="Reporting and Dashboards">
+                <h3>Reporting & Analytics</h3>
+                <ul class="features-list">
+                    <li>Customizable, widget-based dashboards</li>
+                    <li>Real-time and scheduled reports</li>
+                    <li>SLA and compliance tracking</li>
+                    <li>Trend, capacity, and root cause analytics</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Weekly executive summary reports highlight trends, bottlenecks, and SLA breaches for management review.
+                </div>
+            </div>
+            <!-- Integrations & Extensibility -->
+            <div class="module-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Ovb8VCWg78V9qmTCpXj2nbhiOYUoX4IOmQ&s" alt="Integrations">
+                <h3>Integrations & Extensibility</h3>
+                <ul class="features-list">
+                    <li>Integrates with ServiceDesk Plus, AD, Microsoft Teams, Slack, and more</li>
+                    <li>REST API for custom integrations</li>
+                    <li>Third-party alerting and notification hooks</li>
+                </ul>
+                <div class="scenario">
+                    <b>Scenario:</b> Critical alerts are pushed to Microsoft Teams channels, ensuring rapid response by the right team.
+                </div>
+            </div>
+        </div>
+		
+		 <div class="container">
+
+        <!-- ROI Section -->
+        <section class="roi-section">
+            <h2 class="section-title">ROI: Maximize Your IT Investment</h2>
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <h3>Reduce Downtime Costs</h3>
+                    <p>
+                        <b>Example:</b> If your average downtime costs $5,600/minute (Gartner), and OpManager Plus reduces downtime by 40% for a 2-hour annual outage, you save <b>$268,800</b> per year.
+                    </p>
+                </div>
+                <div class="roi-card">
+                    <h3>Consolidate Tools</h3>
+                    <p>
+                        Replace 5+ siloed monitoring tools with one platform. Save on licensing, training, and integration costs—<b>up to $50,000/year</b> for mid-sized enterprises.
+                    </p>
+                </div>
+                <div class="roi-card">
+                    <h3>Boost IT Productivity</h3>
+                    <p>
+                        Automation and unified dashboards reduce manual tasks by up to 60%, freeing IT staff for strategic projects and reducing overtime.
+                    </p>
+                </div>
+                <div class="roi-card">
+                    <h3>Faster Incident Resolution</h3>
+                    <p>
+                        With root cause analysis and automated remediation, mean time to resolve (MTTR) drops by 30% or more—improving service levels and user satisfaction.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <h2 class="section-title">Business Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">🚀</span>
+                    <div>
+                        <b>Accelerate Digital Transformation</b>
+                        <p>Modernize IT operations with automation, analytics, and cloud-ready monitoring.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">🔒</span>
+                    <div>
+                        <b>Strengthen Security & Compliance</b>
+                        <p>Automate configuration backups, audits, and compliance checks for industry standards.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">📉</span>
+                    <div>
+                        <b>Reduce Operational Costs</b>
+                        <p>Consolidate tools, automate workflows, and optimize resource usage.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">⏱️</span>
+                    <div>
+                        <b>Minimize Downtime</b>
+                        <p>Proactive monitoring and instant alerts help you resolve issues before they impact users.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">📊</span>
+                    <div>
+                        <b>Data-Driven Decisions</b>
+                        <p>Customizable dashboards and reports empower smarter IT planning and budgeting.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-icon">🤝</span>
+                    <div>
+                        <b>Seamless Collaboration</b>
+                        <p>Integrations with ITSM and messaging tools streamline incident response and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <h2 class="section-title" style="margin-top: 3rem;">Why OpManager Plus?</h2>
+        <ul class="features-list">
+            <li>Unified ITOM platform: Replace multiple point tools with a single, integrated solution</li>
+            <li>Full-stack observability: Network, server, storage, application, and security monitoring</li>
+            <li>Enterprise scalability: Supports distributed and multi-site monitoring with probe-central architecture</li>
+            <li>Proactive fault management: Intelligent event correlation and root cause analysis</li>
+            <li>Automation: Reduce manual effort and human error with workflow automation</li>
+            <li>Compliance & security: Built-in features for regulatory compliance and security audits</li>
+            <li>Modern, customizable UI with fast navigation and keyboard shortcuts</li>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Baradwaz. All rights reserved.</p>
+        <p>
+            <a href="https://demo.opmanagerplus.com" style="color: #80d8ff;">Live Demo</a> |
+            <a href="https://www.manageengine.com/it-operations-management/" style="color: #80d8ff;">Product Site</a>
+        </p>
+    </div>
+</body>
+</html>
